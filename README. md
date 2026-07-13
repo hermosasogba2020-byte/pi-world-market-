@@ -1,0 +1,27 @@
+# Pi World Market - Écosystème Numérique Mondial
+
+Pi World Market est un écosystème numérique mondial alimenté par Pi Network, intégrant :
+
+- 🛍️ **Marketplace** - Commerce électronique
+- 📚 **Courses** - Apprentissage en ligne
+- 💼 **Jobs** - Offres d'emploi
+- ✈️ **Travels** - Services de voyage
+- 🏠 **Real Estate** - Immobilier
+- 🚗 **Vehicles** - Annonces de véhicules
+- 💰 **Investments** - Investissements
+- 📦 **Dropshipping** - Dropshipping
+- 💬 **Messaging** - Messagerie
+- 📍 **Geolocation** - Services géolocalisés
+
+## Stack Technologique
+
+- **Frontend** : React 19, Tailwind CSS 4
+- **Backend** : Express 4, tRPC 11
+- **Database** : MongoDB Atlas
+- **Deployment** : Vercel, Railway
+
+## Installation
+
+```bash
+npm install
+npm run dev
