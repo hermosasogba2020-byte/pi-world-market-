@@ -1,0 +1,95 @@
+import { Toaster } from "@/components/ui/sonner";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import NotFound from "@/pages/NotFound";
+import { Route, Switch } from "wouter";
+import ErrorBoundary from "./components/ErrorBoundary";
+import { ThemeProvider } from "./contexts/ThemeContext";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+
+// Public pages
+import Home from "./pages/Home";
+import Marketplace from "./pages/Marketplace";
+import ProductDetail from "./pages/ProductDetail";
+import Courses from "./pages/Courses";
+import CourseDetail from "./pages/CourseDetail";
+import Jobs from "./pages/Jobs";
+import JobDetail from "./pages/JobDetail";
+import Travels from "./pages/Travels";
+import TravelDetail from "./pages/TravelDetail";
+import RealEstate from "./pages/RealEstate";
+import Vehicles from "./pages/Vehicles";
+import Investments from "./pages/Investments";
+import Checkout from "./pages/Checkout";
+import Messages from "./pages/Messages";
+import Dropshipping from "./pages/Dropshipping";
+import Recommendations from "./pages/Recommendations";
+import Reviews from "./pages/Reviews";
+
+// Dashboard pages
+import Dashboard from "./pages/Dashboard";
+import BuyerDashboard from "./pages/dashboards/BuyerDashboard";
+import SellerDashboard from "./pages/dashboards/SellerDashboard";
+import TrainerDashboard from "./pages/dashboards/TrainerDashboard";
+import RecruiterDashboard from "./pages/dashboards/RecruiterDashboard";
+import CandidateDashboard from "./pages/dashboards/CandidateDashboard";
+import AdminDashboard from "./pages/dashboards/AdminDashboard";
+
+function Router() {
+  return (
+    <Switch>
+      {/* Public pages */}
+      <Route path="/" component={Home} />
+      <Route path="/marketplace" component={Marketplace} />
+      <Route path="/product/:id" component={ProductDetail} />
+      <Route path="/courses" component={Courses} />
+      <Route path="/course/:id" component={CourseDetail} />
+      <Route path="/jobs" component={Jobs} />
+      <Route path="/job/:id" component={JobDetail} />
+      <Route path="/travels" component={Travels} />
+      <Route path="/travel/:id" component={TravelDetail} />
+      <Route path="/realestate" component={RealEstate} />
+      <Route path="/vehicles" component={Vehicles} />
+      <Route path="/investments" component={Investments} />
+      <Route path="/checkout" component={Checkout} />
+      <Route path="/messages" component={Messages} />
+      <Route path="/dropshipping" component={Dropshipping} />
+      <Route path="/recommendations" component={Recommendations} />
+      <Route path="/reviews" component={Reviews} />
+
+      {/* Dashboard pages */}
+      <Route path="/dashboard" component={Dashboard} />
+      <Route path="/dashboard/buyer" component={BuyerDashboard} />
+      <Route path="/dashboard/seller" component={SellerDashboard} />
+      <Route path="/dashboard/trainer" component={TrainerDashboard} />
+      <Route path="/dashboard/recruiter" component={RecruiterDashboard} />
+      <Route path="/dashboard/candidate" component={CandidateDashboard} />
+      <Route path="/dashboard/admin" component={AdminDashboard} />
+
+      {/* 404 fallback */}
+      <Route path="/404" component={NotFound} />
+      <Route component={NotFound} />
+    </Switch>
+  );
+}
+
+function App() {
+  return (
+    <ErrorBoundary>
+      <ThemeProvider defaultTheme="light">
+        <TooltipProvider>
+          <Toaster />
+          <div className="flex flex-col min-h-screen">
+            <Header />
+            <main className="flex-1">
+              <Router />
+            </main>
+            <Footer />
+          </div>
+        </TooltipProvider>
+      </ThemeProvider>
+    </ErrorBoundary>
+  );
+}
+
+export default App;
