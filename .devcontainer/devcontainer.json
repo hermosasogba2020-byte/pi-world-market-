@@ -1,0 +1,8 @@
+pnpm install
+cp .env.example .env
+DATABASE_URL=mysql://3cho1ggKhGrZoy3.root:D6hoka1MPUKRPvmn@gateway01.eu-central-1.prod.aws.tidbcloud.com:4000/pi_world_market
+DB_SSL=true
+pnpm db:push
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {}
+}
