@@ -1,4 +1,30 @@
 @import "tailwindcss";
+
+@theme {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+}
+
 @layer base {
   :root {
     /* Premium color palette */
@@ -8,6 +34,10 @@
     --card-foreground: 0 0% 8%;
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 8%;
+    --primary: 210 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 92%;
+    --secondary-foreground: 0 0% 8%;
     --muted: 0 0% 88%;
     --muted-foreground: 0 0% 45%;
     --accent: 210 100% 50%;
@@ -27,6 +57,10 @@
     --card-foreground: 0 0% 98%;
     --popover: 0 0% 12%;
     --popover-foreground: 0 0% 98%;
+    --primary: 210 100% 60%;
+    --primary-foreground: 0 0% 8%;
+    --secondary: 0 0% 20%;
+    --secondary-foreground: 0 0% 98%;
     --muted: 0 0% 25%;
     --muted-foreground: 0 0% 70%;
     --accent: 210 100% 60%;
@@ -241,120 +275,5 @@
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
-  }
-}
-
-@layer utilities {
-  .flex {
-    display: flex;
-    min-width: 0;
-    min-height: 0;
-  }
-
-  .grid {
-    display: grid;
-  }
-
-  .gap-4 {
-    gap: 1rem;
-  }
-
-  .gap-6 {
-    gap: 1.5rem;
-  }
-
-  .gap-8 {
-    gap: 2rem;
-  }
-
-  .p-4 {
-    padding: 1rem;
-  }
-
-  .p-6 {
-    padding: 1.5rem;
-  }
-
-  .px-4 {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .py-4 {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-
-  .rounded-lg {
-    border-radius: 0.5rem;
-  }
-
-  .rounded-full {
-    border-radius: 9999px;
-  }
-
-  .shadow-sm {
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  }
-
-  .shadow-md {
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  }
-
-  .shadow-lg {
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-  }
-
-  .transition-smooth {
-    transition: all 0.3s ease-out;
-  }
-
-  .text-center {
-    text-align: center;
-  }
-
-  .text-sm {
-    font-size: 0.875rem;
-  }
-
-  .text-base {
-    font-size: 1rem;
-  }
-
-  .text-lg {
-    font-size: 1.125rem;
-  }
-
-  .font-medium {
-    font-weight: 500;
-  }
-
-  .font-semibold {
-    font-weight: 600;
-  }
-
-  .font-bold {
-    font-weight: 700;
-  }
-
-  .w-full {
-    width: 100%;
-  }
-
-  .max-w-md {
-    max-width: 28rem;
-  }
-
-  .max-w-lg {
-    max-width: 32rem;
-  }
-
-  .max-w-2xl {
-    max-width: 42rem;
-  }
-
-  .mx-auto {
-    margin-left: auto;
-    margin-right: auto;
   }
 }
