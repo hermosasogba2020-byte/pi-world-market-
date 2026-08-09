@@ -18,6 +18,11 @@ export default function Header() {
             <Logo size={32} showWordmark={true} className="hidden sm:flex" />
             <Logo size={32} showWordmark={false} className="flex sm:hidden" />
           </a>
+        <Link href="/">
+          <a className="flex items-center no-underline hover:opacity-80 transition-opacity">
+            <Logo size={32} showWordmark={true} className="hidden sm:flex" />
+            <Logo size={32} showWordmark={false} className="flex sm:hidden" />
+          </a>
         </Link> 
             <span className="hidden sm:inline">Pi World Market</span>
           </a>
