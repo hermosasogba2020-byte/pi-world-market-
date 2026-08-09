@@ -3,7 +3,8 @@ import { Button } from "@/components/ui/button";
 import { getLoginUrl } from "@/const";
 import { Link } from "wouter";
 import { Menu, X, ShoppingBag, BookOpen, Briefcase, Plane, LogOut, Home, Zap, TrendingUp } from "lucide-react";
-import { useState } from "react";import Logo from "@/components/Logo";
+import { useState } from "react";
+import Logo from "@/components/Logo";
 
 export default function Header() {
   const { user, logout, isAuthenticated } = useAuth();
@@ -13,18 +14,10 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur-premium">
       <div className="container flex h-16 items-center justify-between">
         {/* Logo */}
-       <Link href="/">
-          <a className="flex items-center no-underline hover:opacity-80 transition-opacity">
-            <Logo size={32} showWordmark={true} className="hidden sm:flex" />
-            <Logo size={32} showWordmark={false} className="flex sm:hidden" />
-          </a>
         <Link href="/">
           <a className="flex items-center no-underline hover:opacity-80 transition-opacity">
             <Logo size={32} showWordmark={true} className="hidden sm:flex" />
             <Logo size={32} showWordmark={false} className="flex sm:hidden" />
-          </a>
-        </Link> 
-            <span className="hidden sm:inline">Pi World Market</span>
           </a>
         </Link>
 
